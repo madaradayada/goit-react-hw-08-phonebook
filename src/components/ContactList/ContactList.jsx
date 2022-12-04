@@ -1,15 +1,26 @@
-import React from 'react';
 
-import { ContactItem } from 'components/ContactItem/ContactItem';
+import { useDispatch } from 'react-redux';
 
-import { List } from './ContactListStyled';
+import { deleteContact } from 'redux/operations';
+
+import { List, Item, Title, Button } from './ContactListStyled';
 
 export const ContactList = ({ contacts }) => {
-  return (
-    <List>
-      {contacts.map(contact => (
-        <ContactItem contact={contact} key={contact.id} />
-      ))}
-    </List>
-  );
+  const dispatch = useDispatch();   
+
+  const ContactItem = contacts.map(({ id, name, number }) => {
+    return (  
+      
+      <Item key={id}>
+        <Title>
+          {name}: {number}
+        </Title>
+        <Button type="button" onClick={() => dispatch(deleteContact(id))}>
+          Delete
+        </Button>
+      </Item>
+    );
+  });
+
+  return <List>{ContactItem}</List>
 };
