@@ -1,4 +1,8 @@
-export const selectContacts = state => state.contacts.items;
-export const selectFilter = state => state.filter.filter;
+export const getContacts = ({ contacts }) => contacts.items;
+export const getFilter = ({filter}) => filter.filter;
 
-export const selectState = ({ contacts }) => ({ isLoading: contacts.isLoading, error: contacts.error }) 
+export const getIsLoggedIn = ({ auth }) => auth.isLoggedIn;
+export const getUserName = ({ auth }) => auth.user.name;
+
+export const getIsRefreshing = ({ auth }) => auth.isRefreshing;
+export const getAuthError = ({ auth }) => auth.error;

@@ -1,5 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
- 
+import { createSlice } from "@reduxjs/toolkit"; 
 
 const filterSlice = createSlice({
     name: 'filter',
@@ -8,10 +7,7 @@ const filterSlice = createSlice({
     },
     reducers: {
         filterContacts(state, action) {
-            return {
-                ...state,
-                filter: action.payload
-            };            
+        state.filter = action.payload;
         },
     }    
 })

@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const instanceContact = axios.create({
-  baseURL: 'https://6381bf3653081dd54987b96c.mockapi.io/',
+export const instanceContact = axios.create({
+  baseURL: 'https://connections-api.herokuapp.com',
+
 });
 
 export const getContacts = async () => {
@@ -17,4 +18,21 @@ export const addContacts = async data => {
 export const deleteContacts = async (id) => {
   const { data } = await instanceContact.delete(`/contacts/${id}`);
         return data;
-    }
+}
+
+export const registerNewUser = async (credentials) => {
+  const newUser = { ...credentials };
+  const { data } = await instanceContact.post(`/users/signup`, newUser);
+        return data;
+}
+
+export const logInUser = async (credentials) => {
+  const user = { ...credentials };
+  const { data } = await instanceContact.post(`/users/login`, user);
+        return data;
+}
+
+export const logOutUser = async () => { 
+  const { data } = await instanceContact.post(`/users/logout`);
+        return data;
+}
