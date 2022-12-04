@@ -1,32 +1,18 @@
 import styled from 'styled-components';
 
-export const Item = styled.li`
+export const MenuWrapper = styled.div`  
   display: flex;
-  margin-left: 20px; 
-  justify-content: space-between;
-  font-size: 15px;
-  &:not(:last-child) {
-    margin-bottom: 10px;
-  } 
-  &:before {
-    content: "";
-    width: 5px;
-    height: 5px;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    margin-left: -10px;
-    margin-top: 6px;
-}
+  gap: 10px;
+  color: #0000FF;
+  text-align: right;
+  &:last-child {
+    margin-right: 10px;
+  }
 `;
 
-export const Title = styled.p`
-  margin-left: 8px;  
-  font-size: 20px;
-`;
-
-export const Button = styled.button`
-margin-left: 20px;
+export const MenuButton = styled.button`
+display: block;
+width: 80px;
 font-size: 8px;
 text-decoration: none;
 display: inline-block;
@@ -48,4 +34,9 @@ transition: 0.5s;
 &:hover {
   background-position: right center;
 }
+`;
+
+export const UserName = styled.p`
+  font-size: 16px;
+  color: #0000FF;
 `;

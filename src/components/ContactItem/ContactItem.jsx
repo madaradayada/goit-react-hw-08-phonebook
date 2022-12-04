@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
 
-import { Item, Button } from './ContactItemStyled';
+import { Item, Title, Button } from './ContactItemStyled';
 
 export const ContactItem = ({contact}) => {
     const dispatch = useDispatch();
@@ -11,9 +11,9 @@ export const ContactItem = ({contact}) => {
     };
     return (
         <Item>
-          <p>
+          <Title>
             {contact.name}: {contact.phone}
-          </p>
+          </Title>
           <Button type="button" onClick={onDelete}>
             Delete
           </Button>

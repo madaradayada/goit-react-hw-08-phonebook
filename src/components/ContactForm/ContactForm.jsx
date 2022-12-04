@@ -1,14 +1,22 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { Form, Label, Input, Button } from './ContactFormStyled';
+import { addContact } from 'redux/operations';
 
-export function ContactForm({onAddContacs}) {
+export function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+  const dispatch = useDispatch();
 
   const nameId = nanoid(5);
   const numberId = nanoid(5);
 
+  const onAddContacs = data => {
+    dispatch(addContact(data))
+  };
+
+//обновление состояния
   const handleChange = event => {
     const { name, value } = event.currentTarget;
     switch (name) {

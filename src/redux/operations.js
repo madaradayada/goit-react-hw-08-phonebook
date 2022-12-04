@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import{ instanceContact} from 'Api/ContactsApi';
+import{ instanceContact} from 'components/api/ContactsApi';
 
 import {
   getContacts,
@@ -8,7 +8,7 @@ import {
   registerNewUser,
   logInUser,
   logOutUser
-} from 'Api/ContactsApi';
+} from 'components/api/ContactsApi';
 
 const token = {
   set(token) {
