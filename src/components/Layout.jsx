@@ -1,9 +1,10 @@
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
 import { PrivateRoute } from 'components/PrivateRoute';
 import { RestrictedRoute } from 'components/RestrictedRoute';
-
 import { Container } from 'components/App/AppStyled';
+
 import { HomePage } from './pages/HomePage/HomePage';
 import { ContactsPage } from './pages/ContactsPage/ContactsPage';
 import { RegisterPage } from './pages/RegisterPage/RegisterPage';

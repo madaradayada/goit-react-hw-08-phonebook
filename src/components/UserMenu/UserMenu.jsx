@@ -1,8 +1,10 @@
-import { MenuWrapper, MenuButton, UserName } from './UserMenuStyled';
-import { getUserName } from 'redux/selector';
 import { useSelector, useDispatch } from 'react-redux';
-import { logOut } from 'redux/operations';
 import { NavLink } from 'react-router-dom';
+
+import { getUserName } from 'redux/selector';
+import { logOut } from 'redux/operations';
+
+import { MenuWrapper, MenuButton, UserName } from './UserMenuStyled';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();

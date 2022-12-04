@@ -1,7 +1,10 @@
 import { useState, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
+
 import { logIn } from 'redux/operations';
+import { getAuthError } from 'redux/selector';
+
 import {
   LoginForm,
   LogWrapper,
@@ -11,7 +14,6 @@ import {
   SubmitBtn,
   ErrorText,
 } from './LoginPageStyled';
-import { getAuthError } from 'redux/selector';
 
 export const LoginPage = () => {
   const error = useSelector(getAuthError);

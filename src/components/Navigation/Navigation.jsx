@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
 import { getIsLoggedIn } from 'redux/selector';
+
 import { List, Item } from './NavigationStyled';
 
 export const Navigation = () => {

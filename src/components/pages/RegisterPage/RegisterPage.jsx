@@ -1,7 +1,10 @@
 import { useState, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
+
 import { register } from 'redux/operations';
+import { getAuthError } from 'redux/selector';
+
 import {
   RegWrapper,
   ErrorText,
@@ -11,7 +14,6 @@ import {
   FormLabel,
   SubmitBtn,
 } from './RegisterPageStyled';
-import { getAuthError } from 'redux/selector';
 
 export const RegisterPage = () => {
   const error = useSelector(getAuthError);

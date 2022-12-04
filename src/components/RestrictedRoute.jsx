@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
+
 import { getIsLoggedIn } from 'redux/selector';
 
 export const RestrictedRoute = ({

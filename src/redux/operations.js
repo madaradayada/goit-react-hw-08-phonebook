@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import{ instanceContact} from 'components/api/ContactsApi';
 
+import{ instanceContact} from 'components/api/ContactsApi';
 import {
   getContacts,
   addContacts,

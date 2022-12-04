@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import or from 'images/bg1.jpg';
+
 export const Container = styled.div`
 
   min-height: 445px;

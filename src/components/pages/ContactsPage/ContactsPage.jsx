@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import {ContactForm} from 'components/ContactForm/ContactForm';
 import {Filter} from 'components/Filter/Filter';
 import {ContactList} from 'components/ContactList/ContactList';
+
+import { getContacts } from 'redux/selector';
+import { getFilter } from 'redux/selector';
+import { filterContacts } from 'redux/slice/filterSlice';
+import { fetchContacts } from 'redux/operations';
+
 import {
   ContactsPageWrapper,
   ContactsFormWrapper,
@@ -9,12 +18,6 @@ import {
   ContactsTitle,
   LoaderText,
 } from './ContactsPageStyled';
-import { useSelector, useDispatch } from 'react-redux';
-import { getContacts } from 'redux/selector';
-import { getFilter } from 'redux/selector';
-import { filterContacts } from 'redux/slice/filterSlice';
-import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
 
 export const ContactsPage = () => {
   const { isLoading } = useSelector(getContacts);

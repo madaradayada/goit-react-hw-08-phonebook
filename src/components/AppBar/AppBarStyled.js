@@ -19,6 +19,7 @@ export const Logo = styled.span`
   font-weight: 700;
   color: #0000FF;
 `;
+
 export const HeaderWrapper = styled.div`
   display: flex;
     gap: 10px;

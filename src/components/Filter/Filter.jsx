@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import { Label, Input } from './FilterStyled';
 
-
-
 export const Filter = ({ value, onChange }) => {
   const filterId = useId();
   return (

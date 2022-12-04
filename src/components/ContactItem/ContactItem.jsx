@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+
 import { deleteContact } from 'redux/operations';
 
 import { Item, Title, Button } from './ContactItemStyled';

@@ -1,9 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+
 import { getIsRefreshing } from 'redux/selector';
 import { refreshUser } from 'redux/operations';
+
 import { Layout } from 'components/Layout';
 import { AppBar } from 'components/AppBar/AppBar';
+
 import { Wrapper, Footer } from './AppStyled';
 import { ThemeProvider } from '@mui/material';
 import { theme } from 'shared/theme';
